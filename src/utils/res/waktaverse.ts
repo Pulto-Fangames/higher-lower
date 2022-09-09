@@ -15,7 +15,10 @@ export default [
   { id: "messi", nickname: "메시", imageUrl: "https://pbs.twimg.com/media/DqNgoBaWwAU_hs3.jpg", group: "woowakgood" },
   { id: "peridot-green", nickname: "페리도트 그린", imageUrl: "https://img.hankyung.com/photo/202006/01.22998897.1.jpg", group: "woowakgood" },
   { id: "songdo", nickname: "송도", imageUrl: "http://www.focusincheon.com/news/photo/202203/683_944_2444.jpg", group: "woowakgood" },
+  { id: "cargari", nickname: "차가리", imageUrl: "https://i.ytimg.com/vi/IGAEWrFr4rU/sddefault.jpg", group: "woowakgood" },
 
+  { id: "wakzoo", nickname: "왁물원", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTut3r_lLU5V1dMLtgqVxBobsxUuE-YpYQ9Qbln3kfcORlgiEL2HoqJNNee6h7c8tpP5vU&usqp=CAU", group: "woowakgood" },
+  { id: "wakmizrable", nickname: "왁미제라블", imageUrl: "https://i.ytimg.com/vi/ys52M8cwuNk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBo3sgrtsClkc05zWD0S_-ddcF6iA", group: "woowakgood" },
   { id: "alzzaltak", nickname: "알잘딱깔센", imageUrl: "https://i.ytimg.com/vi/88BHHUccMx4/mqdefault.jpg", group: "meme" },
   { id: "legeno", nickname: "레게노", imageUrl: "/assets/imgs/legeno.png", group: "meme" },
   { id: "gwan", nickname: "관", imageUrl: "https://i.ytimg.com/vi/flgi5VhsEc8/maxresdefault.jpg", group: "meme" },
@@ -23,12 +26,14 @@ export default [
   { id: "noobprohack", nickname: "눕프핵", imageUrl: "https://i.ytimg.com/vi/o4YKqzo1o6c/maxresdefault.jpg", group: "content" },
   { id: "waktmorzbi", nickname: "왁트모르즈비", imageUrl: "https://obj.thewiki.kr/thecloud/temp/ec9981ed8ab8ebaaa8eba5b4eca688ebb98420ec8b9ceca68c3120ec9984eab3b52e706e67.png", group: "content" },
 
+  { id: "isedol", nickname: "이세돌", imageUrl: "https://www.coindeskkorea.com/news/photo/202105/73687_11968_1838.jpg", group: "meme" },
+
   // 왁타버스 [큰 주제]
   { id: "waktaverse", nickname: "왁타버스", imageUrl: "https://yt3.ggpht.com/QJdHgfT3P2HhhX4NdjtWYMK5vUNAjOmrKzBahdYOPMm62Qh2v3LaOOh_VW8pZso5TS8-gveo=s900-c-k-c0x00ffffff-no-rj", group: "waktaverse" },
   { id: "panzee", nickname: "팬치", imageUrl: "https://i.ytimg.com/vi/Ko25UnOY51A/hq2.jpg?sqp=-oaymwEkCMACEMACSFryq4qpAxYIARUAAAAAJQAAyEI9AICiQ3gB0AEB&rs=AOn4CLAVRgsXDPaWJMWCFG0B0jHgPAYgYw", group: "waktaverse" },
   { id: "humpanzee", nickname: "혐팬치", imageUrl: "https://pbs.twimg.com/media/ENaPZaxU8AEV2Bg.jpg", group: "waktaverse" },
   { id: "gomem", nickname: "고멤", imageUrl: "https://w.namu.la/s/60e944843607208a3161bc621ccf260c6501cb769db93cb255207d2c6b622883bac4ab6b2b1f674e5e864f919cc5fbc4554b4a4c629ce9d644c398c8cf30928979000ae3b856555d1032781c22a99529", group: "waktaverse" },
-  { id: "isedol", nickname: "이세돌", imageUrl: "https://w.namu.la/s/57ceba2beca8eda6dbb674fbc006ff3e7758a33368c2155b0f579c01c58eb9fead494f0682e5db7b3df714555c90317ba88dd1003f2cd9d8789e2ddcc9134e80275ac4ad78e6311e9a0e7b685b153194dafb3c623f092a7fb47d0874bb621a19", group: "waktaverse" },
+  { id: "ise-dol", nickname: "이세계 아이돌", imageUrl: "https://w.namu.la/s/57ceba2beca8eda6dbb674fbc006ff3e7758a33368c2155b0f579c01c58eb9fead494f0682e5db7b3df714555c90317ba88dd1003f2cd9d8789e2ddcc9134e80275ac4ad78e6311e9a0e7b685b153194dafb3c623f092a7fb47d0874bb621a19", group: "waktaverse" },
   { id: "gomem-gayoje", nickname: "고멤가요제", imageUrl: "https://w.namu.la/s/59841ed3bf32c76ebea4e814729db98bfe15fd68be1ba3db90235ce01de5844436931363568f891e867b3c401b8f2290e6efb5769f66aef0c4c730a060c848b7d6a9bcb792da6a4ce49f2a4eac3140d941785ec440691114274e51d42930c087bc2317e6cfb92118e1fdea45eaf6f6f4", group: "waktaverse" },
 
   { id: "neckslice", nickname: "넥슬라이스", imageUrl: "https://i.ytimg.com/vi/pCf5pgRiijY/maxresdefault.jpg", group: "waktaverse" },
@@ -43,6 +48,8 @@ export default [
 
   { id: "re-wind", nickname: "RE : WIND", imageUrl: "https://w.namu.la/s/cfb6a86c9c915c989f7730ee34a9db96a8717d9e80aaef894b1f6435a3b9bbcfc10ec90957dafb43bd585173bebe6d9bd7c4ef65a86fea488da99ee583a35dfbea23453d9276247798fbfe7408f4bdc194b91fc6590ec1f93763804f3a4765bfa2b1583fcf223d974e5364acc041f222", group: "isedol" },
   { id: "winter-spring", nickname: "겨울봄", imageUrl: "https://w.namu.la/s/a249630f5c4f00172bf1151089e2595e8b9a94847aecd9b64910d6cf039ade0ccd0b7a00cb796631c77b9490c04ec76faf1ee0d877489566b2b8739abea29015a460d99c5cdc4bbc5ee80aec1eb1eb5e5fee0e8ed0b8464a748b48f6419d07df5f051140bbe15372275a24dbc6a392d3", group: "isedol" },
+  { id: "butyouwantmore", nickname: "But You Want More", imageUrl: "https://i.ytimg.com/vi/VcvMQ9MZhF8/maxresdefault.jpg", group: "isedol" },
+  { id: "joke-gineng", nickname: "장난기 기능", imageUrl: "https://i.ytimg.com/vi/fU8picIMbSk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB24CI95eaN2k2I5528AFkVYRKT9Q", group: "isedol" },
 
   { id: "meboze", nickname: "메보즈", imageUrl: "https://i.ytimg.com/vi/yzBGyQFMMrA/maxresdefault.jpg", group: "isedol" },
   { id: "foxze", nickname: "퐉스즈", imageUrl: "https://pbs.twimg.com/media/FX-atQwakAEmrw8.png", gruop: "isedol" },
@@ -56,8 +63,10 @@ export default [
   { id: "jamchan", nickname: "잼챤", imageUrl: "https://c.tenor.com/4-v69LqSsNYAAAAC/%EB%B9%84%EC%B1%A4-%EC%9D%B4%EC%84%B8%EA%B3%84%EC%95%84%EC%9D%B4%EB%8F%8C.gif", group: "isedol" },
   { id: "seguda", nickname: "세구다", imageUrl: "https://image.fmkorea.com/files/attach/new2/20220507/494354581/2524874132/4593933713/792d64a6b3ee0490d4104642e0a105eb.png", group: "isedol" },
   { id: "bapburger", nickname: "밥버거", imageUrl: "https://i.ytimg.com/vi/yA3p5sslT8g/maxresdefault.jpg", group: "isedol" },
+  { id: "ginesburger", nickname: "기네스버거", imageUrl: "https://c.tenor.com/I2DxXUsLVe8AAAAd/%EC%A7%95%EB%B2%84%EA%B1%B0-jingburger.gif", group: "isedol" },
   { id: "jucake", nickname: "주케이크", imageUrl: "https://pbs.twimg.com/media/FJCLDvaaAAEGeN-.jpg", group: "isedol" },
   { id: "nonnagu", nickname: "눈나구", imageUrl: "https://steamuserimages-a.akamaihd.net/ugc/1852673904949378476/7EE75D9F9A5F40DF86FCE2557400FF6BDB878C37/?imw=512&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false", group: "isedol" },
+  { id: "kimera", nickname: "키메라", imageUrl: "/assets/imgs/키메라.png", group: "isedol" },
 
   { id: "ttingyoung-wakik", nickname: "띠용띠용 워익워익", imageUrl: "https://c.tenor.com/rtlH1zr_Bh8AAAAC/%EB%9D%A0%EC%9A%A9%EB%9D%A0%EC%9A%A9%EC%9B%8C%EC%9D%B5%EC%9B%8C%EC%9D%B5-diyong.gif", group: "meme" },
   { id: "melon-36", nickname: "멜론 36위", imageUrl: "https://i1.sndcdn.com/artworks-rhaeThOLsaiTVlgo-5VcY0g-t240x240.jpg", group: "meme" },
@@ -99,6 +108,7 @@ export default [
   { id: "ah-oshngonyo", nickname: "아, 오셨군요", imageUrl: "https://pbs.twimg.com/media/FViE6kxakAIGHqJ.jpg:large", group: "meme" },
   { id: "seubalasi", nickname: "스바라시", imageUrl: "https://i1.sndcdn.com/artworks-Bw83IdQye9lnrBGW-7luJ3A-t500x500.jpg", group: "meme" },
   { id: "hachikitachi", nickname: "하치키타치", imageUrl: "https://image.fmkorea.com/files/attach/new2/20220311/4366334376/5997196/4421890370/9b56ea92e1f7e1f7685a1e6bf7f820d4.jpg", group: "meme" },
+  { id: "rusukbar", nickname: "루석바", imageUrl: "https://i.ytimg.com/vi/I5bkJ4S9qic/maxresdefault.jpg", group: "meme" },
 
   // 망령
   { id: "dandap-bug", nickname: "단답벌레", imageUrl: "https://i.imgur.com/9G9s2D0.png", group: "ghost" },
