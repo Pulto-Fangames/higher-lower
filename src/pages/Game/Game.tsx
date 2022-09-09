@@ -103,14 +103,20 @@ export default class MainGame extends Component<{}, S> {
                 idx={$idx}
                 onClick={(choose) => {
                   if (this.state.members.filter(member => !member.count).length) {
-                    const $members: Member[] = [];
-                    this.state.members.forEach(async ($member, $idx) => {
-                      $members.push($member)
-                      $members[$idx].count = await search($member.nickname);
+                    this.setState({ ment: "잠시만 기다려주세요...", load: false }, async () => {
+                      const $members: Member[] = [];
+                      for (const $member of this.state.members) {
+                        if (!$member.count) {
+                          $member.count = await search($member.nickname);
+                        }
+                        $members.push($member);
+                      }
+      
+                      this.setState({
+                        members: $members,
+                        load: true, ment: undefined
+                      });
                     });
-
-                    this.setState({ members: $members });
-                    alert("오류가 발생했습니다. 다시 시도해주세요.");
                     return;
                   }
                   if (this.state.members) {
@@ -185,7 +191,7 @@ export default class MainGame extends Component<{}, S> {
                               }
                               
                               const words = [...this.state.words, $newMember];
-                              if (words.length > 15) {
+                              if (words.length > 25) {
                                 words.shift();
                               }
 
