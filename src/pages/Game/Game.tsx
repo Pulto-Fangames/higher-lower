@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Component, memo } from "react";
 
 import Card from "../../components/Card";
 
@@ -63,11 +63,6 @@ export default class MainGame extends Component<{}, S> {
       status: "playing",
       scores: { total: 0, best }
     }, () => {
-      $members.forEach(async $member => {
-        if (!$member.count) {
-          $member.count = await search($member.nickname);
-        }
-      });
       this.setState({ members: $members, load: true, init: true });
     });
   }
@@ -96,27 +91,7 @@ export default class MainGame extends Component<{}, S> {
         />}
       {this.state.init && <>
         <div className="flex w-three h-screen">
-          {this.state.members.slice(0, 2).find(m => !m.count) && <div className="flex absolute mt-2 ml-4 text-base text-white">
-            오류가 발생했어요.
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ml-2 cursor-pointer" onClick={() => {
-              this.setState({ ment: undefined, load: false }, async () => {
-                const $members: Member[] = [];
-                for (const $member of this.state.members) {
-                  if (!$member.count) {
-                    $member.count = await search($member.nickname);
-                  }
-                  $members.push($member);
-                }
-
-                this.setState({
-                  members: $members,
-                  load: true
-                });
-              });
-            }}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-            </svg>
-          </div>}
+          {this.state.members.slice(0, 2).find(m => !m.count) && <div className="flex absolute mt-2 ml-4 text-base text-white">오류가 발생했어요.</div>}
           <Score scores={this.state.scores} />
           <VScard status={this.state.status} />
           <div className="flex w-three h-screen">
@@ -125,6 +100,17 @@ export default class MainGame extends Component<{}, S> {
                 member={$member}
                 idx={$idx}
                 onClick={(choose) => {
+                  if (this.state.members.filter(member => !member.count).length) {
+                    const $members: Member[] = [];
+                    this.state.members.forEach(async ($member, $idx) => {
+                      $members.push($member)
+                      $members[$idx].count = await search($member.nickname);
+                    });
+
+                    this.setState({ members: $members });
+                    alert("오류가 발생했습니다. 다시 시도해주세요.");
+                    return;
+                  }
                   if (this.state.members) {
                     const $compared = this.state.members[0];
                     if ($compared.count !== undefined && $member.count !== undefined) {
@@ -133,6 +119,7 @@ export default class MainGame extends Component<{}, S> {
                           if (member.id === $member.id) {
                             member.status = "selected";
                           }
+
                           return member;
                         }),
                         status: (choose === "high" && $compared.count <= $member.count) || (choose === "low" && $compared.count > $member.count)
