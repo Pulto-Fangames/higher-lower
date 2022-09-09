@@ -1,4 +1,4 @@
-import { Component, memo } from "react";
+import { Component } from "react";
 
 import Card from "../../components/Card";
 
@@ -11,6 +11,7 @@ import GameOver from "./components/GameOver";
 
 interface S {
   members: Member[];
+  words: Member[];
   status: "playing" | "success" | "fail" | "none";
   scores: {
     best: number;
@@ -29,6 +30,7 @@ export default class MainGame extends Component<{}, S> {
 
     this.state = {
       members: [],
+      words: [],
       status: "none",
       scores: { best: 0, total: 0 },
       mentIdx: 0,
@@ -147,7 +149,7 @@ export default class MainGame extends Component<{}, S> {
                               total: (this.state.scores?.total ?? 0) + (this.state.status === "success" ? 1 : 0)
                             }
                           }, async () => {
-                            const $new = selectMember("none", this.state.members);
+                            const $new = selectMember("none", this.state.words);
                             const $newMember = Object.assign($new, { status: "none", count: await search($new.nickname) });
 
                             this.state.members.forEach(member => {
@@ -178,9 +180,15 @@ export default class MainGame extends Component<{}, S> {
                               if ($members[0].status === "select") {
                                 $members[0].status = "start";
                               }
+                              
+                              const words = [...this.state.words, $newMember];
+                              if (words.length > 15) {
+                                words.shift();
+                              }
 
                               this.setState({
                                 members: $members,
+                                words,
                                 load: true,
                                 ment: undefined,
                                 status: "playing"

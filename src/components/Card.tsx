@@ -44,7 +44,7 @@ export default class Card extends Component<P> {
           </div>
           <span className="text-white text-3xl md:text-6xl font-bold">{this.props.member.nickname}</span>
           {
-            this.props.member.status === "selected" ?
+            (this.props.member.status === "selected" && this.props.idx !== 0) ?
             <div className="mt-10 flex justify-center">
               <div className="flex font-bold text-2xl text-white">
                 <AnimatedNumbers
@@ -56,7 +56,9 @@ export default class Card extends Component<P> {
               </div>
               <span className="ml-2 text-white my-auto">검색되었어요.</span>
             </div>
-            : (this.props.member.status !== "start" && this.props.idx !== 0) ?
+            : (
+              (this.props.member.status !== "start" && this.props.idx !== 0) ||
+              (this.props.member.status === "start" && this.props.idx !== 0)) ?
             (<>
               <div className="mt-12 flex justify-center">
                 <Button
