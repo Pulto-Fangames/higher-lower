@@ -1,13 +1,13 @@
 import { Component } from "react";
 
 import Card from "../../components/Card";
-import Button from "../../components/Button";
 
 import search from "../../utils/search";
 import selectMember from "../../utils/select-member";
 
 import Score from "./components/Score";
 import VScard from "./components/VS-card";
+import GameOver from "./components/GameOver";
 
 interface S {
   members: Member[];
@@ -47,16 +47,15 @@ export default class MainGame extends Component<{}, S> {
 
   async componentDidMount() {
     const $members: Member[] = [];
-    let $idx = 0;
-    
-    for (const status of ["start", "select", "none"] as Status[]) {
-      const $member = selectMember(status, $members);
-      $members.push($member);
 
-      $members[$idx].count = await search($member.nickname);
+    const $start = selectMember("start", $members);
+    $members.push(Object.assign($start, { status: "start", count: await search($start.nickname) }));
 
-      $idx++;
-    }
+    const $select = selectMember("select", $members);
+    $members.push(Object.assign($select, { status: "select", count: await search($select.nickname) }));
+
+    const $none = selectMember("none", $members);
+    $members.push(Object.assign($none, { status: "none", count: await search($none.nickname) }));
 
     const best = parseInt(localStorage.getItem("CLASSIC_BEST_SCORE") ?? "0");
 
@@ -86,44 +85,14 @@ export default class MainGame extends Component<{}, S> {
         </div>
         <div className="fixed inset-0 z-40 bg-black opacity-50" />
       </div>}
-      {this.state.status === "fail" && <div className="flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 focus:outline-none">
-        <div className="relative z-50 mt-20 mx-auto text-3xl">
-          <span className="text-rose-600 text-5xl font-[Goseogu]">게임 오버!</span>
-          <div className="mt-4 text-white font-bold">
-            <div>당신의 점수는</div>
-            <div className="mt-2 text-gray-400">
-              <span>{this.state.scores.total.toLocaleString()}점</span>
-              <span className="text-base">{this.state.ments[this.state.mentIdx][Math.floor(this.state.ments[this.state.mentIdx].length * Math.random())]}</span>
-            </div>
-          </div>
-          <div className="mt-4 text-white font-bold">
-            <div>최고 점수는</div>
-            <div className="flex mt-2 text-gray-400">
-              <span>{this.state.scores.best}점</span>
-              {this.state.scores.best < this.state.scores.total && <>
-                <span>&gt;</span>
-                <span className="flex text-bestscore">
-                  {this.state.scores.total.toLocaleString()}점
-                  <div className="bestscore text-2xl text-bestscore font-bold">(+{this.state.scores.total - this.state.scores.best})</div><div className="bestscore text-2xl text-bestscore font-bold">(+{this.state.scores.total - this.state.scores.best})</div>v
-                </span>
-              </>}
-            </div>
-          </div>
-          <Button
-            style="secondary"
-            className="text-xl ml-0 mt-2 p-1"
-            onClick={() => {
-              location.reload();
-            }}
-            >
-            <span>다시하기</span>
-          </Button>
-        </div>
-        <div className="fixed inset-0 z-40 bg-black opacity-50" />
-      </div>}
+      {this.state.status === "fail" && <GameOver
+        ments={this.state.ments}
+        mentIdx={this.state.mentIdx}
+        scores={this.state.scores}
+        />}
       {this.state.init && <>
         <div className="flex w-three h-screen">
-          {this.state.members.slice(0, 2).find(m => !m.count) && <div className="flex absolute mt-2 ml-4 text-xl text-white">
+          {this.state.members.slice(0, 2).find(m => !m.count) && <div className="flex absolute mt-2 ml-4 text-base text-white">
             오류가 발생했어요.
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 ml-2 cursor-pointer" onClick={() => {
               this.setState({ ment: undefined, load: false }, async () => {
@@ -184,8 +153,8 @@ export default class MainGame extends Component<{}, S> {
                               total: (this.state.scores?.total ?? 0) + (this.state.status === "success" ? 1 : 0)
                             }
                           }, async () => {
-                            const newMember = selectMember("none", this.state.members);
-                            newMember.count = await search($member.nickname);
+                            const $new = selectMember("none", this.state.members);
+                            const $newMember = Object.assign($new, { status: "none", count: await search($new.nickname) });
 
                             this.state.members.forEach(member => {
                               const memberElement: HTMLDivElement | null = document.querySelector(`div#${member.id}`);
@@ -211,14 +180,10 @@ export default class MainGame extends Component<{}, S> {
                                   continue;
                                 }
                               }
-                              $members.push(newMember);
+                              $members.push($newMember);
                               if ($members[0].status === "select") {
                                 $members[0].status = "start";
                               }
-
-                              $members.slice(-2).forEach(async ($member, idx) => {
-                                $members[idx].count = await search($member.nickname);
-                              });
 
                               this.setState({
                                 members: $members,

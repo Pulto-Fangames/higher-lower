@@ -8,6 +8,7 @@ import Wakgood from "./GroupName/Wakgood";
 import Gomem from "./GroupName/Gomem";
 import Ghost from "./GroupName/Ghost";
 import IsegyeIdol from "./GroupName/Isegye-idol";
+import Waktaverse from "./GroupName/Waktaverse";
 
 import Button from "./Button";
 
@@ -46,6 +47,8 @@ export default class Card extends Component<P, S> {
               <Ghost />
               : this.state?.member?.group === "woowakgood" ?
               <Wakgood />
+              : this.state?.member?.group === "waktaverse" ?
+              <Waktaverse />
               : <></>
             }
           </div>

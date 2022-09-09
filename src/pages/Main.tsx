@@ -24,14 +24,6 @@ function Main() {
           >
           <span>게임 시작</span>
         </Button>
-        <Button
-          style="secondary"
-          onClick={() => {
-            window.location.href = "/game/time";
-          }}
-          >
-          <span>타임 어택</span>
-        </Button>
       </div>
     </>
   );
