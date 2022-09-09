@@ -16,15 +16,13 @@ if (bestScore === null) {
 
 ReactDOM.createRoot(document.getElementById("app") as HTMLElement).render(
   <BrowserRouter>
-    <Starry className="relative overflow-hidden h-screen">
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/game">
-          <Route path="classic" element={<Game />} />
-          <Route path="time" element={<Game />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Starry>
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="/game">
+        <Route path="classic" element={<Game />} />
+        <Route path="time" element={<Game />} />
+      </Route>
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   </BrowserRouter>
 );
