@@ -56,9 +56,7 @@ export default class Card extends Component<P> {
               </div>
               <span className="ml-2 text-white my-auto">검색되었어요.</span>
             </div>
-            : (
-              (this.props.member.status !== "start" && this.props.idx !== 0) ||
-              (this.props.member.status === "start" && this.props.idx !== 0)) ?
+            : this.props.idx !== 0 ?
             (<>
               <div className="mt-12 flex justify-center">
                 <Button
