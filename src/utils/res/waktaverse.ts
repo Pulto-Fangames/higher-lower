@@ -4,7 +4,7 @@ export default [
   { id: "matin", nickname: "마틴", imageUrl: "https://w.namu.la/s/46ad8e5dfee51fc15493d0359451f7f63e661f65526c9f3e85550b9a15c1336bc83693d1885c5c8b2f0e8284a1e331a19441022cb4270f5b5a70b0c38b0bbee9bf3d3bc94ccffa1fff7697b036c53dd7110f027f29c40abfaedf15efd3ce49e6", group: "woowakgood" },
   { id: "ssalgoodsu", nickname: "쌀국수", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg3BlY_W6EdxtS2FjAbcJXC2kWb343zXK7317_5W0i5WD5T6jSn5HbiU1UbiPYyYQvlKQ&usqp=CAU", group: "woowakgood" },
   { id: "ziguyoungsa", nickname: "지구용사", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5njFw9zxbJE81jXnkEs71diS7DgiRBMBN_80KopFkgGPQOtQu0uHhpjdXZAZxkLYs&usqp=CAU", group: "woowakgood" },
-  { id: "wakgaltong", nickname: "왁갈통", imageUrl: "https://cafeptthumb-phinf.pstatic.net/MjAyMjA5MDlfMTQw/MDAxNjYyNzEyNDYwODEz.52wrF5syosOJqxfd3yohwdpPyvt70fYS9zCIW-cXF_Eg.5ukc2zCwnXgZvwQTP4yQOV1rv4Q00gRCcMQqgSGqHowg.PNG/%EC%99%81%EA%B0%88%ED%86%B5_%EF%BC%881%EF%BC%89.png?type=w1600", group: "woowakgood" },
+  { id: "wakgaltong", nickname: "왁갈통", imageUrl: "https://imgur.com/kupHi32.png", group: "woowakgood" },
   { id: "wakrio", nickname: "왁리오", imageUrl: "https://i.ytimg.com/vi/U07XiKz-gso/sddefault.jpg", group: "woowakgood" },
 
   { id: "angel", nickname: "엔젤님", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT175zUCgWHMzvsW7uJX0Wgpmh3KA0A-V0BFbipgWgY5IRNjGJfj1On2CPeRqGa0e-6Np0&usqp=CAU", group: "woowakgood" },

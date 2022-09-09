@@ -60,11 +60,15 @@ export default class MainGame extends Component<{}, S> {
     const best = parseInt(localStorage.getItem("CLASSIC_BEST_SCORE") ?? "0");
 
     this.setState({
-      members: $members,
       status: "playing",
       scores: { total: 0, best }
     }, () => {
-      this.setState({ load: true, init: true });
+      $members.forEach(async $member => {
+        if (!$member.count) {
+          $member.count = await search($member.nickname);
+        }
+      });
+      this.setState({ members: $members, load: true, init: true });
     });
   }
 
@@ -138,8 +142,12 @@ export default class MainGame extends Component<{}, S> {
                         if (this.state.status === "fail") {
                           if (this.state.scores.best < this.state.scores.total) {
                             localStorage.setItem("CLASSIC_BEST_SCORE", this.state.scores.total.toString());
-                            this.setState({ mentIdx: Math.floor(this.state.scores.total / 4) });
                           }
+
+                          let mentIdx = Math.floor(this.state.scores.total / 4);
+                          if (!this.state.ments[mentIdx]) mentIdx = this.state.ments.length - 1;
+
+                          this.setState({ mentIdx });
                           return;
                         }
 
