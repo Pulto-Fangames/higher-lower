@@ -1,72 +1,62 @@
 import { Component } from "react";
 
-import waktaverse from "../utils/res/waktaverse";
-
 import AnimatedNumbers from "react-animated-numbers";
 
-import Wakgood from "./GroupName/Wakgood";
+import Meme from "./GroupName/Meme";
 import Gomem from "./GroupName/Gomem";
 import Ghost from "./GroupName/Ghost";
-import IsegyeIdol from "./GroupName/Isegye-idol";
+import Wakgood from "./GroupName/Wakgood";
 import Waktaverse from "./GroupName/Waktaverse";
+import IsegyeIdol from "./GroupName/Isegye-idol";
 
 import Button from "./Button";
 
 interface P {
-  id: string;
-  status: Status;
-  count?: number;
+  member: Member;
+  idx: number;
   onClick?: (choose: "high" | "low") => void;
   setResult?: () => void;
 }
 
-interface S {
-  member?: WaktaverseMember;
-}
-
-export default class Card extends Component<P, S> {
+export default class Card extends Component<P> {
   constructor(props: P) {
     super(props);
   }
 
-  async componentDidMount() {
-    this.setState({ member: waktaverse.find(m => m.id === this.props.id) });
-  }
-
   render() {
     return (
-      <div id={this.props.id} className="w-full" style={{ background: `linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)) 50% 50% / auto 100% no-repeat, #ffffff url(${this.state?.member?.imageUrl}) 0% 0% / cover no-repeat` }}>
+      <div id={this.props.member.id} className="w-full" style={{ background: `linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)) 50% 50% / auto 100% no-repeat, #000000 url(${this.props.member.imageUrl}) 0% 0% / cover no-repeat` }}>
         <div className="justify-center text-center mt-80">
           <div className="block text-2xl">
             {
-              this.state?.member?.group === "isedol" ?
+              this.props.member.group === "isedol" ?
               <IsegyeIdol />
-              : this.state?.member?.group === "gomem" ?
+              : this.props.member.group === "gomem" ?
               <Gomem />
-              : this.state?.member?.group === "ghost" ?
+              : this.props.member.group === "ghost" ?
               <Ghost />
-              : this.state?.member?.group === "woowakgood" ?
+              : this.props.member.group === "woowakgood" ?
               <Wakgood />
-              : this.state?.member?.group === "waktaverse" ?
+              : this.props.member.group === "waktaverse" ?
               <Waktaverse />
-              : <></>
+              : <Meme />
             }
           </div>
-          <span className="text-white text-3xl md:text-6xl font-bold">{this.state?.member?.nickname}</span>
+          <span className="text-white text-3xl md:text-6xl font-bold">{this.props.member.nickname}</span>
           {
-            this.props.status === "selected" ?
+            this.props.member.status === "selected" ?
             <div className="mt-10 flex justify-center">
               <div className="flex font-bold text-2xl text-white">
                 <AnimatedNumbers
                   includeComma={true}
-                  animateToNumber={this.props.count ?? 0}
+                  animateToNumber={this.props.member.count ?? 0}
                   fontStyle={{ fontSize: "1.5rem", lineHeight: "2rem" }}
                   />
                 회
               </div>
               <span className="ml-2 text-white my-auto">검색되었어요.</span>
             </div>
-            : this.props.status !== "start" ?
+            : (this.props.member.status !== "start" && this.props.idx !== 0) ?
             (<>
               <div className="mt-12 flex justify-center">
                 <Button
@@ -106,7 +96,7 @@ export default class Card extends Component<P, S> {
                 <span className="text-white my-auto">검색되었어요.</span>
               </div>
             </>)
-            : <div className="mt-10 font-bold text-2xl text-white">{(this.props.count ?? 0).toLocaleString()}회</div>
+            : <div className="mt-10 font-bold text-2xl text-white">{(this.props.member.count ?? 0).toLocaleString()}회</div>
           }
         </div>
       </div>

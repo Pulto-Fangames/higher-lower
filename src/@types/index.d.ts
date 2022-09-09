@@ -1,4 +1,4 @@
-type WaktaverseGroup = "isedol" | "gomem" | "ghost" | "woowakgood" | "waktaverse" | "none";
+type WaktaverseGroup = "isedol" | "gomem" | "ghost" | "woowakgood" | "waktaverse";
 
 interface WaktaverseMember {
   id: string;

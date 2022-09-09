@@ -116,11 +116,10 @@ export default class MainGame extends Component<{}, S> {
           <Score scores={this.state.scores} />
           <VScard status={this.state.status} />
           <div className="flex w-three h-screen">
-            {this.state.members?.slice(0, 3).map($member => (
+            {this.state.members?.slice(0, 3).map(($member, $idx) => (
               <Card
-                id={$member.id}
-                count={$member.count}
-                status={$member.status}
+                member={$member}
+                idx={$idx}
                 onClick={(choose) => {
                   if (this.state.members) {
                     const $compared = this.state.members[0];
