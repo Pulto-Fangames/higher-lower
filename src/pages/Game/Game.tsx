@@ -128,6 +128,8 @@ export default class MainGame extends Component<{}, S> {
                           ? "success"
                           : "fail"
                       }, () => {
+                        new Audio(`/assets/sound/${this.state.status}.mp3`).play();
+
                         if (this.state.status === "fail") {
                           if (this.state.scores.best < this.state.scores.total) {
                             localStorage.setItem("CLASSIC_BEST_SCORE", this.state.scores.total.toString());
@@ -152,6 +154,7 @@ export default class MainGame extends Component<{}, S> {
                             const $new = selectMember("none", this.state.words);
                             const $newMember = Object.assign($new, { status: "none", count: await search($new.nickname) });
 
+                            new Audio("/assets/sound/next.mp3").play();
                             this.state.members.forEach(member => {
                               const memberElement: HTMLDivElement | null = document.querySelector(`div#${member.id}`);
                               if (memberElement) {
