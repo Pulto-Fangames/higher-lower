@@ -6,6 +6,7 @@ import Meme from "./GroupName/Meme";
 import Gomem from "./GroupName/Gomem";
 import Ghost from "./GroupName/Ghost";
 import Wakgood from "./GroupName/Wakgood";
+import Content from "./GroupName/Content";
 import Waktaverse from "./GroupName/Waktaverse";
 import IsegyeIdol from "./GroupName/Isegye-idol";
 
@@ -39,6 +40,8 @@ export default class Card extends Component<P> {
               <Wakgood />
               : this.props.member.group === "waktaverse" ?
               <Waktaverse />
+              : this.props.member.group === "content" ?
+              <Content />
               : <Meme />
             }
           </div>
