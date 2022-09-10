@@ -61,7 +61,7 @@ export default class Card extends Component<P> {
             </div>
             : this.props.idx !== 0 ?
             (<>
-              <div className="mt-12 flex justify-center">
+              <div className="mt-10 flex justify-center">
                 <Button
                   style="none"
                   className="bg-waktaverse hover:bg-hwaktaverse hover:scale-y-150"

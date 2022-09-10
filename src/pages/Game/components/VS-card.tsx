@@ -20,9 +20,9 @@ export default class VScard extends Component<P> {
           : this.props.status === "fail" ?
           "bg-rose-500"
           : "bg-black",
-          "w-16", "h-16", "rounded-full", "text-center", "text-3xl", "top-1/2", "left-1/2"].join(" ")}
+          "w-16", "h-16", "rounded-full", "text-center", "text-3xl", "cursor-grab", "top-1/2", "left-1/2"].join(" ")}
         onClick={() => {
-          alert("이스터 에그를 발견하셨군요. 그런데 짜잔, 아무것도 없습니다.");
+          alert("헨타이!!! 어딜 누르시는거에욧!!!");
         }}
         >
         <div className="flex text-white font-bold w-full h-full items-center justify-center z-40">

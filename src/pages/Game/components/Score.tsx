@@ -17,11 +17,11 @@ export default class Score extends Component<P> {
       <div className="absolute flex w-full justify-between text-white text-lg mt-10">
         <div className="flex flex-col mx-4">
           <div>최고 점수</div>
-          <div className="mx-auto">{this.props.scores.best.toLocaleString()}점</div>
+          <div className="mx-auto font-bold">{this.props.scores.best.toLocaleString()}점</div>
         </div>
         <div className="flex flex-col mx-4">
           <div>현재 점수</div>
-          <div className="mx-auto">{this.props.scores.total.toLocaleString()}점</div>
+          <div className="mx-auto font-bold">{this.props.scores.total.toLocaleString()}점</div>
         </div>
       </div>
     );

@@ -66,7 +66,7 @@ export default class MainGame extends Component<{}, S> {
       status: "playing",
       scores: { total: 0, best }
     }, () => {
-      this.setState({ members: $members, load: true, init: true });
+      this.setState({ members: $members, words: $members, load: true, init: true });
     });
   }
 
