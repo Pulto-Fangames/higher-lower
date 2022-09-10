@@ -40,7 +40,8 @@ export default class MainGame extends Component<{}, S> {
         ["잘 했는데... 아쉽네요.", "어라... 뭐지?"],
         ["이 점수에서 틀리네 ㅋㅋㅋ", "손이 미끄러지셨나요?"],
         ["더 이상 할말이 없어요.", "......"],
-        ["레게노"]
+        ["레게노!", "다 외우신거죠?"],
+        ["다 외우신 거 맞네요 ㅋㅋㅋ", "잘하는 비법이 뭔가요..."]
       ],
       init: false,
       load: false
@@ -150,7 +151,7 @@ export default class MainGame extends Component<{}, S> {
 
                         setTimeout(() => {
                           this.setState({
-                            ment: "새 키워드 뽑는 중...",
+                            ment: "새 키워드 고르는 중...",
                             load: false,
                             scores: {
                               best: parseInt(localStorage.getItem("CLASSIC_BEST_SCORE") ?? "0"),
@@ -191,7 +192,7 @@ export default class MainGame extends Component<{}, S> {
                               }
                               
                               const words = [...this.state.words, $newMember];
-                              if (words.length > 25) {
+                              if (words.length > 20) {
                                 words.shift();
                               }
 

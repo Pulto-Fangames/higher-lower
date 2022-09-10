@@ -32,15 +32,13 @@ export default class GameOver extends Component<P> {
             <div>최고 점수는</div>
             <div className="flex mt-2 text-gray-400">
               <span>{this.props.scores.best}점</span>
-              {this.props.scores.best < this.props.scores.total ?
-              <>
+              {this.props.scores.best < this.props.scores.total && <>
                 <span>&gt;</span>
                 <span className="flex text-bestscore">
                   {this.props.scores.total.toLocaleString()}점
                   <div className="bestscore text-2xl mt-auto text-bestscore font-bold">(+{this.props.scores.total - this.props.scores.best})</div>
                 </span>
-              </> :
-              <span className="mt-auto text-base">(넘기질 못했네요.)</span>}
+              </>}
             </div>
           </div>
           <Button
