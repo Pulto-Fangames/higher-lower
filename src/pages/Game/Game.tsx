@@ -104,7 +104,10 @@ export default class MainGame extends Component<{}, S> {
                 idx={$idx}
                 onClick={(choose) => {
                   if (this.state.members.filter(member => !member.count).length) {
-                    new Audio("/assets/sound/load.mp3").play();
+                    const load = new Audio("/assets/sound/load.mp3");
+                    load.volume = .3;
+                    load.play();
+
                     this.setState({ ment: "잠시만 기다려주세요...", load: false }, async () => {
                       const $members: Member[] = [];
                       for (const $member of this.state.members) {
@@ -136,7 +139,9 @@ export default class MainGame extends Component<{}, S> {
                           ? "success"
                           : "fail"
                       }, () => {
-                        new Audio(`/assets/sound/${this.state.status}.mp3`).play();
+                        const status = new Audio(`/assets/sound/${this.state.status}.mp3`);
+                        status.volume = .3;
+                        status.play();
 
                         if (this.state.status === "fail") {
                           if (this.state.scores.best < this.state.scores.total) {
@@ -162,7 +167,10 @@ export default class MainGame extends Component<{}, S> {
                             const $new = selectMember("none", this.state.words);
                             const $newMember = Object.assign($new, { status: "none", count: await search($new.nickname) });
 
-                            new Audio("/assets/sound/next.mp3").play();
+                            const next = new Audio("/assets/sound/next.mp3");
+                            next.volume = .3;
+                            next.play();
+                            
                             this.state.members.forEach(member => {
                               const memberElement: HTMLDivElement | null = document.querySelector(`div#${member.id}`);
                               if (memberElement) {
