@@ -97,6 +97,7 @@ export default [
   { id: "gelgelgel", nickname: "겔겔겔", imageUrl: "https://opgg-com-image.akamaized.net/attach/images/20220216151631.723017.jpg", group: "meme" },
   { id: "miwong", nickname: "미웡", imageUrl: "https://i.ytimg.com/vi/QKec8adVv-0/maxresdefault.jpg", group: "meme" },
   { id: "damari", nickname: "대머리", imageUrl: "/assets/imgs/탈모네.gif", group: "meme" },
+  { id: "158", nickname: "158", imageUrl: "https://i.ytimg.com/vi/rZNkE5-Kwp4/maxresdefault.jpg", group: "meme" },
 
   { id: "gazikigi", nickname: "가지치기", imageUrl: "https://pbs.twimg.com/media/FZeh8b1akAEKcHe?format=jpg&name=large", group: "meme" },
   { id: "king-a", nickname: "킹아", imageUrl: "https://blog.kakaocdn.net/dn/8uIUR/btrvdSc8HkE/rvEgwGjJRlq6xznJC29eO1/img.png", group: "meme" },
@@ -152,4 +153,5 @@ export default [
   { id: "kaonistar", nickname: "카오니스타", imageUrl: "https://image.fmkorea.com/files/attach/new2/20220904/494354581/3129043901/4988097957/99b983892094b5c6d2fc3736e15da7d1.jpg", group: "meme" },
   { id: "review-gomem", nickname: "리뷰 고멤", imageUrl: "https://i.ytimg.com/vi/FU-3qg0N1qY/maxresdefault.jpg", group: "meme" },
   { id: "gitbadakhatnimsongi", nickname: "길바닥햇님송이", imageUrl: "https://c.tenor.com/wF0YBYm9A5oAAAAC/%EA%B3%A0%EB%A9%A4-%EA%B3%A0%EC%A0%95%EB%A9%A4%EB%B2%84.gif", group: "meme" },
+  { id: "darongi", nickname: "다롱이", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpm_dUPp87h9PejlCDjhBdt15cvmc7MDuaz0SKpvJ9B4u6_29knrKsYrdTVpzoe7XplA&usqp=CAU", group: "meme" },
 ] as WaktaverseMember[];
