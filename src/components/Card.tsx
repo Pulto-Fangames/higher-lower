@@ -26,7 +26,7 @@ export default class Card extends Component<P> {
 
   render() {
     return (
-      <div id={this.props.member.id} className="w-full" style={{ background: `linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)) 50% 50% / auto 100% no-repeat, #000000 url(${this.props.member.imageUrl}) 0% 0% / cover no-repeat` }}>
+      <div id={this.props.member.id} className="w-full " style={{ background: `linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)) 50% 50% / auto 100% no-repeat, #000000 url(${this.props.member.imageUrl}) 0% 0% / cover no-repeat` }}>
         <div className="justify-center text-center mt-80">
           <div className="block text-2xl">
             {
