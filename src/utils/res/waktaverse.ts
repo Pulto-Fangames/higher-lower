@@ -101,7 +101,7 @@ export default [
 
   { id: "gazikigi", nickname: "가지치기", imageUrl: "https://pbs.twimg.com/media/FZeh8b1akAEKcHe?format=jpg&name=large", group: "meme" },
   { id: "king-a", nickname: "킹아", imageUrl: "https://blog.kakaocdn.net/dn/8uIUR/btrvdSc8HkE/rvEgwGjJRlq6xznJC29eO1/img.png", group: "meme" },
-  { id: "700", nickname: "ㄱㅇㅇ", imageUrl: "https://image.fmkorea.com/files/attach/new2/20220317/4366334376/418986904/4441291175/4acac96be5ee9ab2069a2bbedd5f6564.jpg", group: "meme" },
+  { id: "r700", nickname: "ㄱㅇㅇ", imageUrl: "https://image.fmkorea.com/files/attach/new2/20220317/4366334376/418986904/4441291175/4acac96be5ee9ab2069a2bbedd5f6564.jpg", group: "meme" },
   { id: "hi-bbangkaru", nickname: "하이 빵가루", imageUrl: "https://www.efoodmall.kr/upload/demo/shopimage/01000800000000000038M.jpg", group: "meme" },
   { id: "ah-butterfly", nickname: "어, 나비다", imageUrl: "http://image.chosun.com/sitedata/image/201604/21/2016042102350_0.jpg", group: "meme" },
 
