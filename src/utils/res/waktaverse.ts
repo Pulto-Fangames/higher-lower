@@ -97,7 +97,7 @@ export default [
   { id: "gelgelgel", nickname: "겔겔겔", imageUrl: "https://opgg-com-image.akamaized.net/attach/images/20220216151631.723017.jpg", group: "meme" },
   { id: "miwong", nickname: "미웡", imageUrl: "https://i.ytimg.com/vi/QKec8adVv-0/maxresdefault.jpg", group: "meme" },
   { id: "damari", nickname: "대머리", imageUrl: "/assets/imgs/탈모네.gif", group: "meme" },
-  { id: "158", nickname: "158", imageUrl: "https://i.ytimg.com/vi/rZNkE5-Kwp4/maxresdefault.jpg", group: "meme" },
+  { id: "ine158", nickname: "158", imageUrl: "https://i.ytimg.com/vi/rZNkE5-Kwp4/maxresdefault.jpg", group: "meme" },
 
   { id: "gazikigi", nickname: "가지치기", imageUrl: "https://pbs.twimg.com/media/FZeh8b1akAEKcHe?format=jpg&name=large", group: "meme" },
   { id: "king-a", nickname: "킹아", imageUrl: "https://blog.kakaocdn.net/dn/8uIUR/btrvdSc8HkE/rvEgwGjJRlq6xznJC29eO1/img.png", group: "meme" },
