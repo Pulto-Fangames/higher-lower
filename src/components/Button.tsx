@@ -23,7 +23,7 @@ export default class Button extends Component<P, {}> {
         className={[
           "transition", "cursor-pointer", "rounded-md", "p-3", "outline-none", "focus:outline-none", "mx-2",
           this.props.style === "primary"
-          ? ["bg-indigo-400", "text-white", this.choiceValue(this.props.background) ? "hover:bg-indigo-500" : "hover:text-indigo-500"].join(" ")
+          ? ["bg-indigo-500", "text-white", this.choiceValue(this.props.background) ? "hover:bg-indigo-600" : "hover:text-indigo-600"].join(" ")
           :
           this.props.style === "secondary"
           ? ["bg-gray-500", "text-white", this.choiceValue(this.props.background) ? "hover:bg-gray-600" : "hover:text-gray-600"].join(" ")

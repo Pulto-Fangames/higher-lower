@@ -104,6 +104,7 @@ export default class MainGame extends Component<{}, S> {
                 idx={$idx}
                 onClick={(choose) => {
                   if (this.state.members.filter(member => !member.count).length) {
+                    new Audio("/assets/sound/load.mp3").play();
                     this.setState({ ment: "잠시만 기다려주세요...", load: false }, async () => {
                       const $members: Member[] = [];
                       for (const $member of this.state.members) {
