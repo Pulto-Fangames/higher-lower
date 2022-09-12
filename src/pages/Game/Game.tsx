@@ -105,7 +105,7 @@ export default class MainGame extends Component<{}, S> {
                 onClick={(choose) => {
                   if (this.state.members.filter(member => !member.count).length) {
                     const load = new Audio("/assets/sound/load.mp3");
-                    load.volume = .3;
+                    load.volume = .5;
                     load.play();
 
                     this.setState({ ment: "잠시만 기다려주세요...", load: false }, async () => {
@@ -140,7 +140,7 @@ export default class MainGame extends Component<{}, S> {
                           : "fail"
                       }, () => {
                         const status = new Audio(`/assets/sound/${this.state.status}.mp3`);
-                        status.volume = .3;
+                        status.volume = .5;
                         status.play();
 
                         if (this.state.status === "fail") {
@@ -168,7 +168,7 @@ export default class MainGame extends Component<{}, S> {
                             const $newMember = Object.assign($new, { status: "none", count: await search($new.nickname) });
 
                             const next = new Audio("/assets/sound/next.mp3");
-                            next.volume = .3;
+                            next.volume = .5;
                             next.play();
                             
                             this.state.members.forEach(member => {
