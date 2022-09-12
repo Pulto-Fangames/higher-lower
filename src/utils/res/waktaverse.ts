@@ -62,7 +62,7 @@ export default [
   { id: "meboze", nickname: "메보즈", imageUrl: "https://pbs.twimg.com/media/FSOh4j8aAAA3SVD.jpg:small", group: "isedol" },
   { id: "foxze", nickname: "퐉스즈", imageUrl: "https://pbs.twimg.com/media/FX-atQwakAEmrw8.png", group: "isedol" },
   { id: "mo7ze", nickname: "무7즈", imageUrl: "https://yt3.ggpht.com/WbtM5GZ5IlzeiFUUFa3UTbtLRPzX478fUK9izTQHehoM7sT1LLgOqDEORyDfQYkKXd6f_AUZ4-w=s900-c-k-c0x00ffffff-no-rj", group: "isedol" },
-  { id: "107ze", nickname: "107즈", imageUrl: "https://pbs.twimg.com/media/FUHaM3IaQAAOBYd.jpg:large", group: "isedol" },
+  { id: "ze107", nickname: "107즈", imageUrl: "https://pbs.twimg.com/media/FUHaM3IaQAAOBYd.jpg:large", group: "isedol" },
 
   { id: "ddolgie", nickname: "뚤기", imageUrl: "https://gif.fmkorea.com/files/attach/new2/20220407/4366334376/4403970871/4503488211/5695c0f082be019f8ff47ce3d959055e.gif", group: "isedol" },
   { id: "chamsae", nickname: "참새", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/98/Tree_Sparrow_August_2007_Osaka_Japan.jpg", group: "isedol" },
@@ -146,7 +146,7 @@ export default [
   { id: "gilhatnimsong-i", nickname: "길햇님송OI", imageUrl: "https://w.namu.la/s/5d89f039e3751e1dd05d62178879e4fd8d51254161246b2736b9feb67982bbb770d33023941eafa500aa860e62071f75a78dfb3d3ca516f42f8abecb60e9715dca7f962c7a5763ff3cdb66ac2deb6d3031c7467ee4c23d2bd172f1a1e4e645f6", group: "ghost" },
   { id: "cotton", nickname: "코튼튼", imageUrl: "https://pbs.twimg.com/media/FOjIi1nVkAU6z82.jpg:large", group: "ghost" },
 
-  { id: "500-won", nickname: "500원", imageUrl: "https://imgur.com/5w82htW.png", group: "meme" },
+  { id: "wak500won", nickname: "500원", imageUrl: "https://imgur.com/5w82htW.png", group: "meme" },
   { id: "doduk", nickname: "생계형 도둑", imageUrl: "https://c.tenor.com/JuRvLZ3zq1wAAAAC/%EC%86%8C%ED%94%BC%EC%95%84-%EA%B3%A0%EB%A9%A4.gif", group: "meme" },
 
   // Etc.
