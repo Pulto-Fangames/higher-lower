@@ -47,6 +47,21 @@ div.vs-card div {
   animation: vs 1s ease-in-out .5s infinite alternate;
 }
 
+div.preview-bg {
+  animation: Spin 8s infinite linear;
+}
+
+div.preview span {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+
+div.preview span.desc {
+  transform: translate(-50%, -160%);
+}
+
 img.logo {
   transition: .5s;
 }
@@ -89,12 +104,8 @@ img.logo:nth-child(2) {
   }
 }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-
+@keyframes Spin {
   100% {
-    opacity: 0;
+    transform: rotate(360deg);
   }
 }
