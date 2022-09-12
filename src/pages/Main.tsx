@@ -19,7 +19,7 @@ function Main() {
         <Button
           style="primary"
           onClick={() => {
-            window.location.href = "/game/classic";
+            window.location.href = "/game";
           }}
           >
           <span>게임 시작</span>

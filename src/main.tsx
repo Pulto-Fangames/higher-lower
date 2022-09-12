@@ -19,10 +19,7 @@ ReactDOM.createRoot(document.getElementById("app") as HTMLElement).render(
     <Starry>
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/game">
-          <Route path="classic" element={<Game />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
+        <Route path="/game" element={<Game />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Starry>
