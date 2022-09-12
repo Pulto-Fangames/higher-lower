@@ -145,7 +145,7 @@ export default [
   { id: "kwonmin", nickname: "권민", imageUrl: "https://i.imgur.com/FJhXlqo.png", group: "ghost" },
   { id: "kimchimandu", nickname: "김치만두번영택사스가", imageUrl: "https://i.imgur.com/1PHaRoS.png", group: "ghost" },
   { id: "bujungingan", nickname: "부정형 인간", imageUrl: "https://i.imgur.com/IYNYePT.png", group: "ghost" },
-  { id: "gaenyang-i", nickname: "개냥이", imageUrl: "	https://images.mir.pe/file/195636ce3208514e8c4ad76bb0743fbdf2cefcafd0bbd6199aa0138beba0d189", group: "ghost" },
+  { id: "gaenyang-i", nickname: "개냥이", imageUrl: "https://images.mir.pe/file/195636ce3208514e8c4ad76bb0743fbdf2cefcafd0bbd6199aa0138beba0d189", group: "ghost" },
   { id: "gilhatnimsong-i", nickname: "길햇님송OI", imageUrl: "https://w.namu.la/s/5d89f039e3751e1dd05d62178879e4fd8d51254161246b2736b9feb67982bbb770d33023941eafa500aa860e62071f75a78dfb3d3ca516f42f8abecb60e9715dca7f962c7a5763ff3cdb66ac2deb6d3031c7467ee4c23d2bd172f1a1e4e645f6", group: "ghost" },
   { id: "cotton", nickname: "코튼튼", imageUrl: "https://pbs.twimg.com/media/FOjIi1nVkAU6z82.jpg:large", group: "ghost" },
 
