@@ -1,3 +1,6 @@
+/**
+ * 왁타버스 키워드 목록
+ */
 export default [
   // 우왁굳 관련
   { id: "woowakgood", nickname: "우왁굳", imageUrl: "https://w.namu.la/s/b91ee7707d31eb7c06bf95fe05fb645b1eb55b569a4e326d67d35451603804bbe14f4cfc652285e7484c89c91ca4479e6a85662d67e9288af037367eab2424a70c59972636a6ee964667256c47b97c92", group: "woowakgood" },
@@ -153,5 +156,5 @@ export default [
   { id: "kaonistar", nickname: "카오니스타", imageUrl: "https://image.fmkorea.com/files/attach/new2/20220904/494354581/3129043901/4988097957/99b983892094b5c6d2fc3736e15da7d1.jpg", group: "meme" },
   { id: "review-gomem", nickname: "리뷰 고멤", imageUrl: "https://i.ytimg.com/vi/FU-3qg0N1qY/maxresdefault.jpg", group: "meme" },
   { id: "gitbadakhatnimsongi", nickname: "길바닥햇님송이", imageUrl: "https://c.tenor.com/wF0YBYm9A5oAAAAC/%EA%B3%A0%EB%A9%A4-%EA%B3%A0%EC%A0%95%EB%A9%A4%EB%B2%84.gif", group: "meme" },
-  { id: "darongi", nickname: "다롱이", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpm_dUPp87h9PejlCDjhBdt15cvmc7MDuaz0SKpvJ9B4u6_29knrKsYrdTVpzoe7XplA&usqp=CAU", group: "meme" },
+  { id: "darongi", nickname: "다롱이", imageUrl: "https://yt3.ggpht.com/ZMAbLTpy1KoPCqh4e3nDr6A3SHKoveWtw5PL-JLeK9l-8zzSF6nYZDPATumWrQADC8P1f642tP8=s900-c-k-c0x00ffffff-no-rj", group: "meme" },
 ] as WaktaverseMember[];
