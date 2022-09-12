@@ -64,7 +64,7 @@ export default class Card extends Component<P> {
               <div className="mt-10 flex justify-center">
                 <Button
                   style="none"
-                  className="bg-waktaverse hover:bg-hwaktaverse hover:scale-y-150"
+                  className="bg-waktaverse hover:bg-hwaktaverse hover:scale-y-[2.5]"
                   onClick={() => {
                     const clickFunction = this.props.onClick;
                     if (typeof clickFunction === "function") {
