@@ -5,6 +5,7 @@ import AnimatedNumbers from "react-animated-numbers";
 import Meme from "./GroupName/Meme";
 import Gomem from "./GroupName/Gomem";
 import Ghost from "./GroupName/Ghost";
+import Music from "./GroupName/Music";
 import Wakgood from "./GroupName/Wakgood";
 import Content from "./GroupName/Content";
 import Waktaverse from "./GroupName/Waktaverse";
@@ -42,6 +43,8 @@ export default class Card extends Component<P> {
               <Waktaverse />
               : this.props.member.group === "content" ?
               <Content />
+              : this.props.member.group === "music" ?
+              <Music />
               : <Meme />
             }
           </div>
