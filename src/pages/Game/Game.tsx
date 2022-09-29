@@ -97,7 +97,7 @@ export default class MainGame extends Component<{}, S> {
           {this.state.members.slice(0, 2).find(m => !m.count) && <div className="flex absolute mt-2 ml-4 text-base text-white">오류가 발생했어요.</div>}
           <Score scores={this.state.scores} />
           <VScard status={this.state.status} />
-          <div className="flex w-three h-screen">
+          <div className="cards flex w-three h-screen">
             {this.state.members?.slice(0, 3).map(($member, $idx) => (
               <Card
                 member={$member}

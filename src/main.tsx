@@ -5,7 +5,7 @@ import Main from "./pages/Main";
 import Game from "./pages/Game";
 import NotFound from "./pages/Not-found";
 
-import "./styles/index.css";
+import "./styles/index.scss";
 
 import Starry from "./components/Starry";
 

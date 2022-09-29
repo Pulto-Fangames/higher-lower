@@ -8,11 +8,6 @@ function Main() {
 
   return (
     <>
-      <div className="preview absolute z-50 bottom-0 right-0 hidden md:block">
-        <span className="desc absolute text-xl text-white">❓ 랜덤 키워드:</span>
-        <span className="absolute font-bold text-2xl text-white">{member.nickname}</span>
-        <div className="preview-bg rounded-full w-80 h-80 mb-5 mr-5"  style={{ background: `linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)) 50% 50% / auto 100% no-repeat, #000000 url(${member.imageUrl}) 0% 0% / cover no-repeat` }} />
-      </div>
       <div className="flex justify-center mb-24">
         <img alt="higher" className="logo w-44 md:w-60" src="/assets/logo/higher.png" />
         <img alt="lower" className="logo w-44 md:w-60" src="/assets/logo/lower.png" />

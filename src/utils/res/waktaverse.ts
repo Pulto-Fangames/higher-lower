@@ -121,14 +121,15 @@ export default [
   { id: "mitsunehaku", nickname: "미츠네 하쿠", imageUrl: "https://i.imgur.com/KE00LXs.png", group: "gomem" },
   { id: "secretto", nickname: "비밀소녀", imageUrl: "https://i.imgur.com/DjwCi2q.png", group: "gomem" },
   { id: "businesskim", nickname: "비즈니스 킴", imageUrl: "https://i.imgur.com/aMpleKO.png", group: "gomem" },
-  { id: "friedshrimp", nickname: "새우튀김", imageUrl: "https://i.imgur.com/tFPKKjd.png", group: "gomem" },
   { id: "sophia", nickname: "소피아", imageUrl: "https://i.imgur.com/oPImSAv.png", group: "gomem" },
   { id: "leedeoksoo", nickname: "이덕수 할아바이", imageUrl: "https://i.imgur.com/1pOxMTX.png", group: "gomem" },
   { id: "pungsin", nickname: "풍신", imageUrl: "https://i.imgur.com/P3uLmmg.png", group: "gomem" },
   { id: "rusuk", nickname: "해루석", imageUrl: "https://i.imgur.com/FVeQVXk.png", group: "gomem" },
   { id: "hikiking", nickname: "히키킹", imageUrl: "https://i.imgur.com/0X4q3Fu.png", group: "gomem" },
-  { id: "carnarjungtur", nickname: "카르나르 융터르", imageUrl: "https://i.imgur.com/SKRN28N.png", group: "gomem" },
+  { id: "carnarjungtur", nickname: "카르나르 융터르", imageUrl: "https://imgur.com/wjzX7Jw.png", group: "gomem" },
   { id: "freeter", nickname: "프리터", imageUrl: "https://i.imgur.com/xBOqvYx.png", group: "gomem" },
+  { id: "kimchimandu", nickname: "김치만두번영택사스가", imageUrl: "https://i.imgur.com/1PHaRoS.png", group: "gomem" },
+  { id: "callycarly", nickname: "캘리칼리 데이비슨", imageUrl: "https://i.imgur.com/1ctM03D.png", group: "gomem" },
 
   { id: "hikiquen", nickname: "히키퀸", imageUrl: "https://dcimg2.dcinside.co.kr/viewimage.php?id=3abcd32de2dd37a2&no=24b0d769e1d32ca73deb87fa11d02831de04ca5aee4f7f339edb1c2bd94778326be3d2746143383fe41347d5f4f7e99c90846241fb4234cc5340fcb1b94dd48949f4", group: "gomem" },
 
@@ -139,15 +140,15 @@ export default [
 
   // 망령
   { id: "dandap-bug", nickname: "단답벌레", imageUrl: "https://i.imgur.com/9G9s2D0.png", group: "ghost" },
-  { id: "callycarly", nickname: "캘리칼리 데이비슨", imageUrl: "https://i.imgur.com/1ctM03D.png", group: "ghost" },
   { id: "wakphago", nickname: "왁파고", imageUrl: "https://i.imgur.com/XmGXuTR.png", group: "ghost" },
   { id: "chunshik", nickname: "곽춘식", imageUrl: "https://i.imgur.com/UhF6U8P.png", group: "ghost" },
   { id: "kwonmin", nickname: "권민", imageUrl: "https://i.imgur.com/FJhXlqo.png", group: "ghost" },
-  { id: "kimchimandu", nickname: "김치만두번영택사스가", imageUrl: "https://i.imgur.com/1PHaRoS.png", group: "ghost" },
   { id: "bujungingan", nickname: "부정형 인간", imageUrl: "https://i.imgur.com/IYNYePT.png", group: "ghost" },
   { id: "gaenyang-i", nickname: "개냥이", imageUrl: "https://images.mir.pe/file/195636ce3208514e8c4ad76bb0743fbdf2cefcafd0bbd6199aa0138beba0d189", group: "ghost" },
   { id: "gilhatnimsong-i", nickname: "길햇님송OI", imageUrl: "https://w.namu.la/s/5d89f039e3751e1dd05d62178879e4fd8d51254161246b2736b9feb67982bbb770d33023941eafa500aa860e62071f75a78dfb3d3ca516f42f8abecb60e9715dca7f962c7a5763ff3cdb66ac2deb6d3031c7467ee4c23d2bd172f1a1e4e645f6", group: "ghost" },
   { id: "cotton", nickname: "코튼튼", imageUrl: "https://pbs.twimg.com/media/FOjIi1nVkAU6z82.jpg:large", group: "ghost" },
+  { id: "friedshrimp", nickname: "새우튀김", imageUrl: "https://i.imgur.com/tFPKKjd.png", group: "ghost" },
+  { id: "nosperto-hod", nickname: "노스페라투 호드", imageUrl: "/assets/imgs/성인 호드.png", group: "ghost" },
 
   { id: "wak500won", nickname: "500원", imageUrl: "https://imgur.com/5w82htW.png", group: "meme" },
   { id: "wak500wuk", nickname: "500억", imageUrl: "/assets/imgs/500억.jpg", group: "meme" },
