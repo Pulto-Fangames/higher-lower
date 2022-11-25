@@ -1,8 +1,10 @@
 import waktaverse from "./res/waktaverse";
 
 export default (status: Status, members?: Member[]): Member => {
-  const $select = () =>
-    Object.assign(waktaverse[Math.floor(Math.random() * waktaverse.length)], { status, count: 0 });
+  const $select = () => {
+    const member = waktaverse[Math.floor(Math.random() * waktaverse.length)];
+    return { ...member, status, count: 0 };
+  }
   let $one = $select();
 
   if (members) {

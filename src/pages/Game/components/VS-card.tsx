@@ -12,7 +12,7 @@ export default class VScard extends Component<P> {
   render() {
     return (
       <div
-        className={["vs-card", "absolute", "transition", "duration-700",
+        className={["vs-card", "absolute",
           this.props.status === "playing" ?
           "bg-hwaktaverse"
           : this.props.status === "success" ?
@@ -20,7 +20,7 @@ export default class VScard extends Component<P> {
           : this.props.status === "fail" ?
           "bg-rose-500"
           : "bg-black",
-          "w-16", "h-16", "rounded-full", "text-center", "text-3xl", "cursor-grab", "top-1/2", "left-1/2"].join(" ")}
+          "w-16", "h-16", "rounded-full", "text-center", "text-3xl", "cursor-grab"].join(" ")}
         onClick={() => {
           alert("헨타이!!! 어딜 누르시는거에욧!!!");
         }}

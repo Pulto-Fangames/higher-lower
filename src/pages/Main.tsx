@@ -1,11 +1,6 @@
-import { useState } from "react";
 import Button from "../components/Button";
 
-import selectMember from "../utils/select-member";
-
 function Main() {
-  const [member] = useState<Member>(selectMember("none"));
-
   return (
     <>
       <div className="flex justify-center mb-24">

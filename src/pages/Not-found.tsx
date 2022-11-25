@@ -6,7 +6,7 @@ function NotFound() {
       <div className="grid justify-center box-border text-center items-baseline pt-52">
         <span className="text-gray-200 text-4xl md:text-6xl hentai">4 0 4</span>
         <span className="mt-1 text-gray-200 text-lg md:text-xl hentai">
-          존재하지 않는 페이지에요.
+          오@류!?!? 해당 페이지는 없습ㄴㅣ다!
         </span>
       </div>
       <Button

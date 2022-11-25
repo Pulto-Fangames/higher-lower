@@ -1,7 +1,7 @@
 /**
  * 왁타버스 키워드 목록
  */
-export default [
+const keywords: WaktaverseMember[] =  [
   // 우왁굳 관련
   { id: "woowakgood", nickname: "우왁굳", imageUrl: "https://w.namu.la/s/b91ee7707d31eb7c06bf95fe05fb645b1eb55b569a4e326d67d35451603804bbe14f4cfc652285e7484c89c91ca4479e6a85662d67e9288af037367eab2424a70c59972636a6ee964667256c47b97c92", group: "woowakgood" },
   { id: "matin", nickname: "마틴", imageUrl: "https://w.namu.la/s/46ad8e5dfee51fc15493d0359451f7f63e661f65526c9f3e85550b9a15c1336bc83693d1885c5c8b2f0e8284a1e331a19441022cb4270f5b5a70b0c38b0bbee9bf3d3bc94ccffa1fff7697b036c53dd7110f027f29c40abfaedf15efd3ce49e6", group: "woowakgood" },
@@ -62,10 +62,9 @@ export default [
   { id: "butyouwantmore", nickname: "But You Want More", imageUrl: "https://i.ytimg.com/vi/VcvMQ9MZhF8/maxresdefault.jpg", group: "music" },
   { id: "joke-gineng", nickname: "장난기 기능", imageUrl: "https://i.ytimg.com/vi/fU8picIMbSk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB24CI95eaN2k2I5528AFkVYRKT9Q", group: "music" },
 
-  { id: "meboze", nickname: "메보즈", imageUrl: "https://pbs.twimg.com/media/FSOh4j8aAAA3SVD.jpg:small", group: "isedol" },
+  { id: "meboze", nickname: "메보즈", imageUrl: "/assets/imgs/메보즈.png", group: "isedol" },
   { id: "foxze", nickname: "퐉스즈", imageUrl: "https://pbs.twimg.com/media/FX-atQwakAEmrw8.png", group: "isedol" },
   { id: "mo7ze", nickname: "무7즈", imageUrl: "https://yt3.ggpht.com/WbtM5GZ5IlzeiFUUFa3UTbtLRPzX478fUK9izTQHehoM7sT1LLgOqDEORyDfQYkKXd6f_AUZ4-w=s900-c-k-c0x00ffffff-no-rj", group: "isedol" },
-  { id: "ze107", nickname: "107즈", imageUrl: "https://pbs.twimg.com/media/FUHaM3IaQAAOBYd.jpg:large", group: "isedol" },
 
   { id: "ddolgie", nickname: "뚤기", imageUrl: "https://gif.fmkorea.com/files/attach/new2/20220407/4366334376/4403970871/4503488211/5695c0f082be019f8ff47ce3d959055e.gif", group: "isedol" },
   { id: "chamsae", nickname: "참새", imageUrl: "https://upload.wikimedia.org/wikipedia/commons/9/98/Tree_Sparrow_August_2007_Osaka_Japan.jpg", group: "isedol" },
@@ -103,7 +102,7 @@ export default [
   { id: "damari", nickname: "대머리", imageUrl: "/assets/imgs/탈모네.gif", group: "meme" },
   { id: "ine158", nickname: "158", imageUrl: "https://i.ytimg.com/vi/rZNkE5-Kwp4/maxresdefault.jpg", group: "meme" },
 
-  { id: "gazikigi", nickname: "가지치기", imageUrl: "https://pbs.twimg.com/media/FZeh8b1akAEKcHe?format=jpg&name=large", group: "meme" },
+  { id: "gazikigi", nickname: "가지치기", imageUrl: "https://post-phinf.pstatic.net/MjAxODA5MThfMjc1/MDAxNTM3MjQxMzI0ODc1.-TMc7KPCdm1xOW9sj6ZU_wZcDR7xCt7VjVofj2Uh7k8g.jnB9DKArhSWZ8198UJ2TWUkwn4y9mgMGX1hEdxMdWQ8g.JPEG/TP-201802087364.jpg?type=w1200", group: "meme" },
   { id: "king-a", nickname: "킹아", imageUrl: "https://blog.kakaocdn.net/dn/8uIUR/btrvdSc8HkE/rvEgwGjJRlq6xznJC29eO1/img.png", group: "meme" },
   { id: "r700", nickname: "ㄱㅇㅇ", imageUrl: "https://image.fmkorea.com/files/attach/new2/20220317/4366334376/418986904/4441291175/4acac96be5ee9ab2069a2bbedd5f6564.jpg", group: "meme" },
   { id: "hi-bbangkaru", nickname: "하이 빵가루", imageUrl: "https://www.efoodmall.kr/upload/demo/shopimage/01000800000000000038M.jpg", group: "meme" },
@@ -146,7 +145,7 @@ export default [
   { id: "nosperto-hod", nickname: "노스페라투 호드", imageUrl: "/assets/imgs/성인 호드.png", group: "ghost" },
 
   { id: "wak500won", nickname: "500원", imageUrl: "https://imgur.com/5w82htW.png", group: "meme" },
-  { id: "wak500wuk", nickname: "500억", imageUrl: "/assets/imgs/500억.jpg", group: "meme" },
+  { id: "wak500wuk", nickname: "500억", imageUrl: "/assets/imgs/500억.png", group: "meme" },
   { id: "humdata", nickname: "혐데이터", imageUrl: "https://i.ytimg.com/vi/HoAXq93ulDY/maxresdefault.jpg", group: "meme" },
   { id: "doduk", nickname: "생계형 도둑", imageUrl: "https://c.tenor.com/JuRvLZ3zq1wAAAAC/%EC%86%8C%ED%94%BC%EC%95%84-%EA%B3%A0%EB%A9%A4.gif", group: "meme" },
 
@@ -159,9 +158,11 @@ export default [
 
   { id: "how-to-love", nickname: "How To Love", imageUrl: "https://i1.sndcdn.com/artworks-fdaLoYzAk9ygeRWc-GGqZnw-t500x500.jpg", group: "music" },
   { id: "starlight", nickname: "STARLIGHT", imageUrl: "https://i.ytimg.com/vi/YwQkPlFlOJQ/mqdefault.jpg", group: "music" },
-  { id: "truelove", nickname: "TRUE LOVE", imageUrl: "https://pbs.twimg.com/media/FdBCXSFakAAqGA5?format=jpg&name=large", group: "music" },
+  { id: "truelover", nickname: "TRUE LOVER", imageUrl: "https://i1.sndcdn.com/artworks-uWSklWVF0SZskgEo-Lzpsog-t500x500.jpg", group: "music" },
   { id: "showdown", nickname: "ShowDown", imageUrl: "https://i.ytimg.com/vi/YZ0xA3LUzNQ/maxresdefault.jpg?v=6328cbae", group: "music" },
   { id: "guenyang", nickname: "그냥 살아!", imageUrl: "https://pbs.twimg.com/media/FdGAS-AakAEuDpI.png", group: "music" },
-  { id: "pinalye", nickname: "피날레", imageUrl: "https://i1.sndcdn.com/artworks-1Z0zadMgyDKq8XtW-2CPeLQ-t500x500.jpg", group: "music" },
+  { id: "pinalye", nickname: "피날레", imageUrl: "https://i.ytimg.com/vi/IzrIYIqlBnA/maxresdefault.jpg", group: "music" },
   { id: "mamgane", nickname: "맘가는대로", imageUrl: "https://i1.sndcdn.com/artworks-VOLFMEMgre4hlAMl-HWyO3Q-t500x500.jpg", group: "music" },
-] as WaktaverseMember[];
+];
+
+export default keywords;
