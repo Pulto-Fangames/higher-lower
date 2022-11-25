@@ -160,7 +160,7 @@ const keywords: WaktaverseMember[] =  [
   { id: "starlight", nickname: "STARLIGHT", imageUrl: "https://i.ytimg.com/vi/YwQkPlFlOJQ/mqdefault.jpg", group: "music" },
   { id: "truelover", nickname: "TRUE LOVER", imageUrl: "https://i1.sndcdn.com/artworks-uWSklWVF0SZskgEo-Lzpsog-t500x500.jpg", group: "music" },
   { id: "showdown", nickname: "ShowDown", imageUrl: "https://i.ytimg.com/vi/YZ0xA3LUzNQ/maxresdefault.jpg?v=6328cbae", group: "music" },
-  { id: "guenyang", nickname: "그냥 살아!", imageUrl: "https://pbs.twimg.com/media/FdGAS-AakAEuDpI.png", group: "music" },
+  { id: "guenyang", nickname: "그냥 살아!", imageUrl: "https://w.namu.la/s/4e2eead9038af9afb6b8be0a96b99c6f7639126765c1076024abd0e0d68a30de3de60dfcae7d8cd98ae138adbda799684584c774386fe075b8ecd2e860c59f4ea8f02e7bde22fba71f9b623f135673a370d5669364d316a8a2eb7fb3fc8000de0eaf685dbb9bd4a175eb49bcc48dd78e", group: "music" },
   { id: "pinalye", nickname: "피날레", imageUrl: "https://i.ytimg.com/vi/IzrIYIqlBnA/maxresdefault.jpg", group: "music" },
   { id: "mamgane", nickname: "맘가는대로", imageUrl: "https://i1.sndcdn.com/artworks-VOLFMEMgre4hlAMl-HWyO3Q-t500x500.jpg", group: "music" },
 ];
