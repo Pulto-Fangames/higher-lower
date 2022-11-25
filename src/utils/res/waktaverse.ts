@@ -101,6 +101,7 @@ const keywords: WaktaverseMember[] =  [
   { id: "miwong", nickname: "미웡", imageUrl: "https://i.ytimg.com/vi/QKec8adVv-0/maxresdefault.jpg", group: "meme" },
   { id: "damari", nickname: "대머리", imageUrl: "/assets/imgs/탈모네.gif", group: "meme" },
   { id: "ine158", nickname: "158", imageUrl: "https://i.ytimg.com/vi/rZNkE5-Kwp4/maxresdefault.jpg", group: "meme" },
+  { id: "narayngnora", nickname: "나랑 놀아", imageUrl: "https://yt3.ggpht.com/bi1_kxvnO3pNlnoDqECtC1NWR6QxJMJrxhhkuDCYfmJfSqWyXXSB-mxYhTEQx0wz29RRk2GfRg=s900-c-k-c0x00ffffff-no-rj", group: "meme" },
 
   { id: "gazikigi", nickname: "가지치기", imageUrl: "https://post-phinf.pstatic.net/MjAxODA5MThfMjc1/MDAxNTM3MjQxMzI0ODc1.-TMc7KPCdm1xOW9sj6ZU_wZcDR7xCt7VjVofj2Uh7k8g.jnB9DKArhSWZ8198UJ2TWUkwn4y9mgMGX1hEdxMdWQ8g.JPEG/TP-201802087364.jpg?type=w1200", group: "meme" },
   { id: "king-a", nickname: "킹아", imageUrl: "https://blog.kakaocdn.net/dn/8uIUR/btrvdSc8HkE/rvEgwGjJRlq6xznJC29eO1/img.png", group: "meme" },
