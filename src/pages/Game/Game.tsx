@@ -54,13 +54,13 @@ export default class MainGame extends Component<{}, S> {
     const $members: Member[] = [];
 
     const $start = selectMember("start", $members);
-    $members.push(Object.assign($start, { status: "start", count: await search($start.nickname) }));
+    $members.push(Object.assign($start, { status: "start", count: await search($start) }));
 
     const $select = selectMember("select", $members);
-    $members.push(Object.assign($select, { status: "select", count: await search($select.nickname) }));
+    $members.push(Object.assign($select, { status: "select", count: await search($select) }));
 
     const $none = selectMember("none", $members);
-    $members.push(Object.assign($none, { status: "none", count: await search($none.nickname) }));
+    $members.push(Object.assign($none, { status: "none", count: await search($none) }));
 
     const best = parseInt(localStorage.getItem("CLASSIC_BEST_SCORE") ?? "0");
 
@@ -114,7 +114,7 @@ export default class MainGame extends Component<{}, S> {
                       const $members: Member[] = [];
                       for (const $member of this.state.members) {
                         if (!$member.count) {
-                          $member.count = await search($member.nickname);
+                          $member.count = await search($member);
                         }
                         $members.push($member);
                       }
@@ -167,7 +167,7 @@ export default class MainGame extends Component<{}, S> {
                             }
                           }, async () => {
                             const $new = selectMember("none", this.state.words);
-                            const $newMember = Object.assign($new, { status: "none", count: await search($new.nickname) });
+                            const $newMember = Object.assign($new, { status: "none", count: await search($new) });
 
                             const next = new Audio("/assets/sound/next.mp3");
                             next.volume = .5;

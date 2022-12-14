@@ -5,6 +5,7 @@ interface WaktaverseMember {
   nickname: string;
   imageUrl: string;
   group: WaktaverseGroup;
+  keyword?: string;
 }
 
 type Status = "start" | "select" | "selected" | "none";
