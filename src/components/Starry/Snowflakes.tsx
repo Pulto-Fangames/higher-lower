@@ -13,10 +13,12 @@ const Container = styled.div`
   width: 100%;
   z-index: -1;
 `;
+
 const animSnowflakes = keyframes`
   from { transform: translateY(-2000px); }
   to { transform: translateY(0px); }
 `;
+
 const random = (x: number) => Math.floor(Math.random() * x);
 const multipleBoxShadow = (length: number) => {
   const biggestScreenSize = 2560;
@@ -26,6 +28,7 @@ const multipleBoxShadow = (length: number) => {
   }
   return value;
 };
+
 const snowflakes = (h: number, w: number, animationTime: number, shadow: number) => styled.div`
   width: ${w}px;
   height: ${h}px;
@@ -41,6 +44,7 @@ const snowflakes = (h: number, w: number, animationTime: number, shadow: number)
     box-shadow: ${multipleBoxShadow(shadow)};
   }
 `;
+
 const SmallSnowflakes = snowflakes(1, 1, 50, 700);
 const MediumSnowflakes = snowflakes(2, 2, 100, 200);
 const BigSnowflakes = snowflakes(3, 3, 150, 100);

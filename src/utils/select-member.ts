@@ -5,13 +5,13 @@ export default (status: Status, members?: Member[]): Member => {
     const member = waktaverse[Math.floor(Math.random() * waktaverse.length)];
     return { ...member, status, count: 0 };
   }
-  let $one = $select();
+  let one = $select();
 
   if (members) {
-    while (members.find(m => m.id === $one.id)) {
-      $one = $select();
+    while (members.find(m => m.id === one.id)) {
+      one = $select();
     }
   }
 
-  return $one;
+  return one;
 }

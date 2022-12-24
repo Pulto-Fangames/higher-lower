@@ -1,4 +1,5 @@
 import { Component } from "react";
+import styled from "styled-components";
 
 import Button from "../../../components/Button";
 
@@ -11,6 +12,85 @@ interface P {
   }
 }
 
+const GameOverProp = styled.div`
+  display: flex;
+  position: fixed;
+  overflow-y: hidden;
+  overflow-y: auto;
+  inset: 0;
+  z-index: 50;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+const GameOverAwning = styled.div`
+  position: fixed;
+  background-color: black;
+  opacity: 0.5;
+  inset: 0;
+  z-index: 40;
+`;
+
+const Container = styled.div`
+  position: relative;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  z-index: 50;
+`;
+
+const GameOverText = styled.span`
+  color: rgb(225 29 72);
+  font-size: 3rem;
+  line-height: 1;
+  font-family: "Gosegu";
+`;
+
+const StatusContainer = styled.div`
+  margin-top: 1rem;
+  color: white;
+  font-weight: bold;
+
+  div.score {
+    margin-top: 0.5rem;
+    color: rgb(156 163 173);
+
+    span.ment {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+`;
+
+const BestScoreContainer = styled.div`
+  margin-top: 1rem;
+  color: white;
+  font-weight: bold;
+
+  div.status {
+    display: flex;
+    margin-top: 0.5rem;
+    color: rgb(156, 163, 175);
+
+    span.bs-con {
+      display: flex;
+      color: rgb(29, 206, 145);
+
+      div.bestscore {
+        text-shadow: 0 0 7px rgb(29, 206, 145);
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: rgb(29, 206, 145);
+      }
+    }
+  }
+`;
+
 export default class GameOver extends Component<P> {
   constructor(props: P) {
     super(props);
@@ -18,41 +98,39 @@ export default class GameOver extends Component<P> {
 
   render() {
     return (
-      <div className="flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 focus:outline-none">
-        <div className="relative z-50 mt-20 mx-auto text-3xl">
-          <span className="text-rose-600 text-5xl font-[Goseogu]">게임 오버!</span>
-          <div className="mt-4 text-white font-bold">
+      <GameOverProp>
+        <Container>
+          <GameOverText>게임 오버!</GameOverText>
+          <StatusContainer>
             <div>당신의 점수는</div>
-            <div className="mt-2 text-gray-400">
+            <div className="score">
               <span>{this.props.scores.total.toLocaleString()}점</span>
-              <span className="text-base">{this.props.ments[this.props.mentIdx][Math.floor(this.props.ments[this.props.mentIdx].length * Math.random())]}</span>
+              <span className="ment">{this.props.ments[this.props.mentIdx][Math.floor(this.props.ments[this.props.mentIdx].length * Math.random())]}</span>
             </div>
-          </div>
-          <div className="mt-4 text-white font-bold">
+          </StatusContainer>
+          <BestScoreContainer>
             <div>최고 점수는</div>
-            <div className="flex mt-2 text-gray-400">
+            <div className="status">
               <span>{this.props.scores.best}점</span>
               {this.props.scores.best < this.props.scores.total && <>
                 <span>👉</span>
-                <span className="flex text-bestscore">
+                <span className="bs-con">
                   {this.props.scores.total.toLocaleString()}점
-                  <div className="bestscore text-2xl mt-auto text-bestscore font-bold">(+{this.props.scores.total - this.props.scores.best})</div>
+                  <div className="bestscore">(+{this.props.scores.total - this.props.scores.best})</div>
                 </span>
               </>}
             </div>
-          </div>
-          <Button
-            style="secondary"
-            className="text-xl ml-0 mt-2 p-1"
+          </BestScoreContainer>
+          <Button style="secondary"
             onClick={() => {
               location.reload();
             }}
             >
             <span>다시하기</span>
           </Button>
-        </div>
-        <div className="fixed inset-0 z-40 bg-black opacity-50" />        
-      </div>
+        </Container>
+        <GameOverAwning />
+      </GameOverProp>
     )
   }
 }

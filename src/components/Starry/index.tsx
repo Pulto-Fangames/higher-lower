@@ -1,20 +1,21 @@
 import { Component, ReactNode } from "react";
 import styled from "styled-components";
-
 import Snowflakes from "./Snowflakes";
-
-const Wrap = styled.div`
-  position: relative;
-`;
 
 interface P {
   children?: ReactNode;
 }
 
+const Wrap = styled.div`
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+`;
+
 export default class Starry extends Component<P> {
   render() {
     return (
-      <Wrap className="relative overflow-hidden h-screen">
+      <Wrap>
         <Snowflakes />
         {this.props.children}
       </Wrap>

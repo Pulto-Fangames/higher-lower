@@ -13,10 +13,10 @@ export default function (group: WaktaverseGroup): string {
     case "content":
       return "우왁굳 컨텐츠";
     case "music":
-      return "음악"
+      return "음악";
     case "meme":
-      return "밈"
+      return "밈";
     default:
-      return ""
+      return "";
   }
 }

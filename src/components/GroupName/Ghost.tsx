@@ -1,10 +1,15 @@
 import { Component } from "react";
+import styled from "styled-components";
+
+const GGhost = styled.span`
+  color: white;
+`;
 
 export default class Ghost extends Component {
   render() {
     return (
       <>
-        <span className="text-white">👻 망령</span>
+        <GGhost>👻 망령</GGhost>
       </>
     )
   }

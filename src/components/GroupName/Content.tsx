@@ -1,10 +1,15 @@
 import { Component } from "react";
+import styled from "styled-components";
+
+const GContent = styled.span`
+  color: white;
+`;
 
 export default class Content extends Component {
   render() {
     return (
       <>
-        <span className="text-white">😎 콘텐츠</span>
+        <GContent>😎 콘텐츠</GContent>
       </>
     )
   }

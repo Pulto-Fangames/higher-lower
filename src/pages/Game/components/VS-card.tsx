@@ -1,8 +1,59 @@
-import { Component } from "react"
+import {Component} from "react"
+import styled, {css} from "styled-components";
+
+type kind = "playing" | "success" | "fail" | "none";
 
 interface P {
-  status: "playing" | "success" | "fail" | "none";
+  status: kind;
 }
+
+const VSCard = styled.div<{ status: kind }>`
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  text-align: center;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  transform: translate(-50%, -50%);
+  cursor: grab;
+
+  ${(props) => css`
+    background-color: ${props.status === "playing"
+      ? "rgb(78, 129, 112)"
+      : props.status === "success"
+      ? "rgb(16, 185, 129)"
+      : props.status === "fail"
+      ? "rgb(244, 63, 94)"
+      : "black"};
+  `}
+
+  div {
+    display: flex;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+    animation: vs 1s ease-in-out .5s infinite alternate;
+
+    @keyframes vs {
+      0% {
+        transform: scale(1);
+      }  
+      100% {
+        transform: scale(1.25);
+      }
+    }
+  }
+`;
 
 export default class VScard extends Component<P> {
    constructor(props: P) {
@@ -11,21 +62,13 @@ export default class VScard extends Component<P> {
 
   render() {
     return (
-      <div
-        className={["vs-card", "absolute",
-          this.props.status === "playing" ?
-          "bg-hwaktaverse"
-          : this.props.status === "success" ?
-          "bg-emerald-500"
-          : this.props.status === "fail" ?
-          "bg-rose-500"
-          : "bg-black",
-          "w-16", "h-16", "rounded-full", "text-center", "text-3xl", "cursor-grab"].join(" ")}
+      <VSCard
+        status={this.props.status}
         onClick={() => {
           alert("헨타이!!! 어딜 누르시는거에욧!!!");
         }}
         >
-        <div className="flex text-white font-bold w-full h-full items-center justify-center z-40">
+        <div>
           {
             this.props.status === "playing" ?
             "VS"
@@ -40,7 +83,7 @@ export default class VScard extends Component<P> {
             : "VS"
           }
         </div>
-      </div>
+      </VSCard>
     )
   }
 }
